@@ -1,3 +1,8 @@
+import PaymentSection from "../../components/PaymentSection";
+import SecurityPanel from "../../components/SecurityPanel";
+import VideoCall from "../../components/VideoCall";
+import DocumentChamber from "../../components/DocumentChamber";
+import MeetingCalendar from "../../components/MeetingCalendar";
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Bell, Calendar, TrendingUp, AlertCircle, PlusCircle } from 'lucide-react';
@@ -7,6 +12,7 @@ import { Badge } from '../../components/ui/Badge';
 import { CollaborationRequestCard } from '../../components/collaboration/CollaborationRequestCard';
 import { InvestorCard } from '../../components/investor/InvestorCard';
 import { useAuth } from '../../context/AuthContext';
+
 import { CollaborationRequest } from '../../types';
 import { getRequestsForEntrepreneur } from '../../data/collaborationRequests';
 import { investors } from '../../data/users';
@@ -38,6 +44,12 @@ export const EntrepreneurDashboard: React.FC = () => {
   
   return (
     <div className="space-y-6 animate-fade-in">
+      <MeetingCalendar />
+      <VideoCall />
+<DocumentChamber />
+<PaymentSection />
+<SecurityPanel />
+  
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Welcome, {user.name}</h1>

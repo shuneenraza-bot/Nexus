@@ -1,3 +1,6 @@
+import MeetingCalendar from "../../components/MeetingCalendar";
+import VideoCall from "../../components/VideoCall";
+import DocumentChamber from "../../components/DocumentChamber";
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Bell, Calendar, TrendingUp, AlertCircle, PlusCircle } from 'lucide-react';
@@ -38,6 +41,9 @@ export const EntrepreneurDashboard: React.FC = () => {
   
   return (
     <div className="space-y-6 animate-fade-in">
+         <MeetingCalendar />
+      <VideoCall />
+<DocumentChamber />
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Welcome, {user.name}</h1>
